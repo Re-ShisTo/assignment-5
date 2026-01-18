@@ -21,7 +21,7 @@ const useProps = () => {
   const handleDelete = (id) => {
     if (!window.confirm("Are you sure?")) return;
 
-    fetch(`http://localhost:8000/contacts/${id}`, {
+    fetch(`https://contact-db-df7v.onrender.com/contacts/${id}`, {
       method: "DELETE",
     })
       .then(() => {

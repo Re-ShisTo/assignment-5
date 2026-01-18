@@ -36,7 +36,7 @@ const EditModal = () => {
   };
 
   const handleSave = () => {
-    fetch(`http://localhost:8000/contacts/${contactData.id}`, {
+    fetch(`https://contact-db-df7v.onrender.com/contacts/${contactData.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const EditModal = () => {
       .then((res) => res.json())
       .then((updatedContact) => {
         setContacts((prev) =>
-          prev.map((el) => (el.id === updatedContact.id ? updatedContact : el))
+          prev.map((el) => (el.id === updatedContact.id ? updatedContact : el)),
         );
         openShowModal(updatedContact);
       })
