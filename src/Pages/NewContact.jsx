@@ -15,7 +15,7 @@ const NewContact = () => {
   });
 
   const handleAddition = () => {
-    fetch(`http://localhost:8000/contacts`, {
+    fetch(`https://contact-db-df7v.onrender.com/contacts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
